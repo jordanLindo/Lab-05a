@@ -66,12 +66,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+function sumAndMultiply(a, b, c) { //eslint-disable-line    
+    let theSum = a;
+    theSum = sum(theSum,b)[0];
+    theSum = sum(theSum,c)[0];
+    let product = a;
+    product = multiply(product,b)[0];
+    product = multiply(product,c)[0];
+    let text1 = a+" and "+b+" and "+c+" sum to "+theSum+".";
+    let text2 = "The product of "+a+" and "+b+" and "+c+" is "+product+"."
+    let result = [theSum, product, text1, text2];
+    return result;
+    
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-//testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
